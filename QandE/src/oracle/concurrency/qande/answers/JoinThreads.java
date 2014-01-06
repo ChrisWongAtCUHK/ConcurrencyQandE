@@ -1,8 +1,22 @@
 package oracle.concurrency.qande.answers;
 
+/**
+ * <p>
+ *  JoinThreads 
+ * </p>
+ * @author Chris Wong
+ *
+ */
 public class JoinThreads {
 	static String message;
 	
+	/**
+	 * <p>
+	 *  CorrectorThread is a thread subclass
+	 * </p>
+	 * @author Chris Wong
+	 *
+	 */
 	private static class CorrectorThread extends Thread {
 		@Override
 		public void run(){

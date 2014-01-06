@@ -1,9 +1,23 @@
 package oracle.concurrency.qande.questions;
 
+/**
+ * <p>
+ *  <a href="http://docs.oracle.com/javase/tutorial/essential/concurrency/QandE/questions.html">BadThreads</a>
+ * </p>
+ * @author Chris Wong
+ *
+ */
 public class BadThreads {
 
 	static String message;
 	
+	/**
+	 * <p>
+	 *  CorrectorThread is a thread subclass
+	 * </p>
+	 * @author Chris Wong
+	 *
+	 */
 	private static class CorrectorThread extends Thread {
 		@Override
 		public void run(){

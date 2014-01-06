@@ -4,6 +4,13 @@ public class SynchroizedThreads {
 	static String message;
 	private static Object lock = new Object();
 	
+	/**
+	 * <p>
+	 *  CorrectorThread is a thread subclass
+	 * </p>
+	 * @author Chris Wong
+	 *
+	 */
 	private static class CorrectorThread extends Thread {
 		@Override
 		public void run(){
