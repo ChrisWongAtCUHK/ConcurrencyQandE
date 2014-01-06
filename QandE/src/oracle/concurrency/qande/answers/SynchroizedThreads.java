@@ -1,4 +1,4 @@
-package answers;
+package oracle.concurrency.qande.answers;
 
 public class SynchroizedThreads {
 	static String message;

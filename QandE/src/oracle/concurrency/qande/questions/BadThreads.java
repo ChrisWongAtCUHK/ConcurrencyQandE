@@ -1,4 +1,4 @@
-package questions;
+package oracle.concurrency.qande.questions;
 
 public class BadThreads {
 

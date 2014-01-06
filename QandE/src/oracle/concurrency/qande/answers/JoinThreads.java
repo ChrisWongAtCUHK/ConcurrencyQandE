@@ -1,4 +1,4 @@
-package answers;
+package oracle.concurrency.qande.answers;
 
 public class JoinThreads {
 	static String message;
