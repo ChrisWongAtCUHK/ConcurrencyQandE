@@ -8,6 +8,7 @@
 		<property name="badthreads-main-class"			value="oracle.concurrency.qande.questions.BadThreads"/>
 		<property name="jointhreads-main-class"			value="oracle.concurrency.qande.answers.JoinThreads"/>
 		<property name="synchroizedthreads-main-class"	value="oracle.concurrency.qande.answers.SynchroizedThreads"/>
+		<property name="blockingqueue-main-class"		value="oracle.concurrency.qande.answers.guardmeth.ProducerConsumerExample" />
         <property name="base-dir"						value="bin"/>
 		<property name="deploy-dir"						value="deploy"/>
         <property name="javadoc-dir"					value="doc"/>
@@ -85,6 +86,10 @@
         <java fork="true" classname="${synchroizedthreads-main-class}" classpath="${base-dir}" >
         </java>
     </target>
+	<target name="runbq" depends="compile">
+        <java fork="true" classname="${blockingqueue-main-class}" classpath="${base-dir}" >
+        </java>
+    </target>
         	
 	<!-- Run by jar -->
 	<!-- Run ${main-class} by jar -->
@@ -104,6 +109,13 @@
     </target>
 	<target name="jarst" depends="build">
 		<java fork="true" failonerror="true" classname="${synchroizedthreads-main-class}">
+			<classpath>
+				<pathelement location="deploy/${project-name}.jar"/>
+			</classpath>
+		</java>
+    </target>
+	<target name="jarbq" depends="build">
+		<java fork="true" failonerror="true" classname="${blockingqueue-main-class}">
 			<classpath>
 				<pathelement location="deploy/${project-name}.jar"/>
 			</classpath>
